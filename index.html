@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portafolio | Backend Developer</title>
+    <!-- Google Fonts: Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS vía CDN (solo una vez) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body class="font-sans text-gray-100">
+    <!-- Fondo con gradiente -->
+    <div class="fixed inset-0 -z-10 bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div>
+
+    
+    <header class="fixed top-0 left-0 w-full z-50">
+        <!-- Mobile: barra flotante -->
+        <div class="sm:hidden flex justify-center pt-4">
+            <div class="flex space-x-6 px-6 py-2 
+                        bg-white/10 backdrop-blur-md border border-white/10 shadow-lg 
+                        rounded-full text-sm font-medium">
+            <a href="#projects" class="hover:text-slate-300 transition">Proyectos</a>
+            <a href="#tech" class="hover:text-slate-300 transition">Tecnologías</a>
+            <a href="#about" class="hover:text-slate-300 transition">Sobre mí</a>
+            <a href="mailto:spcesar912@hotmail.com" class="hover:text-slate-300 transition">Contacto</a>
+            </div>
+        </div>
+
+        <!-- Desktop: barra full width -->
+        <div class="hidden sm:block bg-white/5 backdrop-blur-md border-b border-white/10 shadow-md">
+            <div class="max-w-[1200px] mx-auto px-4 flex justify-between items-center py-4">
+            
+            <!-- Logo -->
+            <div class="flex items-center">
+                <img src="./assets/img/imagotipo.png" alt="Logo" class="h-8 w-auto">
+            </div>
+
+            <!-- Navegación -->
+            <nav class="flex space-x-8 text-sm font-medium">
+                <a href="#projects" class="hover:text-slate-300 transition">Proyectos</a>
+                <a href="#tech" class="hover:text-slate-300 transition">Tecnologías</a>
+                <a href="#about" class="hover:text-slate-300 transition">Sobre mí</a>
+                <a href="mailto:spcesar912@hotmail.com" class="hover:text-slate-300 transition">Contacto</a>
+            </nav>
+
+            <!-- Iconos -->
+            <div class="flex items-center space-x-4">
+                <a href="https://www.linkedin.com/in/c%C3%A9sar-aaron-sachun-pozo-04415a1b5/" target="_blank" class="hover:text-indigo-300 transition">
+                <img src="./assets/icons/linkedin.svg" alt="LinkedIn" class="w-5 h-5">
+                </a>
+                <a href="https://github.com/Sp-Cesar" target="_blank" class="hover:text-indigo-300 transition">
+                <img src="./assets/icons/github.svg" alt="GitHub" class="w-5 h-5">
+                </a>
+            </div>
+
+            </div>
+        </div>
+    </header>
+    <!-- Main content -->
+    <main class="max-w-[1200px] mx-auto px-4 py-20">
+        <section id="hero" class="max-w-[1200px] mx-auto px-4 py-10 flex flex-col md:flex-row items-center gap-12">
+  
+            <!-- Texto -->
+            <div class="flex-1 text-center md:text-left space-y-6">
+                <h1 class="text-4xl md:text-5xl font-bold">Hola, soy <span class="text-indigo-300">Aaron</span></h1>
+                <p class="text-gray-300 leading-relaxed max-w-xl">
+                Estudiante de Ingeniería de Software apasionado por el desarrollo backend. 
+                Me estoy formando en tecnologías modernas para construir sistemas robustos, 
+                escalables y de alto impacto.
+                </p>
+
+                <!-- Enlaces -->
+                <div class="flex flex-wrap justify-center md:justify-start gap-4 pt-4">
+                <!-- LinkedIn -->
+                <a href="https://www.linkedin.com/in/c%C3%A9sar-aaron-sachun-pozo-04415a1b5/" target="_blank"
+                    class="flex items-center gap-2 px-5 py-2 border border-gray-400 rounded-full 
+                        text-gray-300 hover:bg-gray-100 hover:text-gray-900 transition">
+                    <!-- Icono LinkedIn -->
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-4 h-4 fill-current">
+                    <path d="M100.3 448H7.4V148.9h92.9zM53.8 108.1C24.1 108.1 0 83.5 0 53.8 
+                            0 24.1 24.1-.4 53.8-.4s53.8 24.1 53.8 54.2c0 29.7-24.1 54.3-53.8 54.3zM447.9 
+                            448h-92.4V304.1c0-34.3-.7-78.3-47.7-78.3-47.7 0-55 37.3-55 75.8V448h-92.5V148.9h88.8v40.8h1.3c12.4-23.5 
+                            42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448z"/>
+                    </svg>
+                    LinkedIn
+                </a>
+                <!-- GitHub -->
+                <a href="https://github.com/Sp-Cesar" target="_blank"
+                    class="flex items-center gap-2 px-5 py-2 border border-gray-400 rounded-full 
+                        text-gray-300 hover:bg-gray-100 hover:text-gray-900 transition">
+                    <!-- Icono GitHub -->
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" class="w-4 h-4 fill-current">
+                    <path d="M165.9 397.4c0 2-2.3 3.6-5.2 
+                        3.6-2.9 0-5.2-1.6-5.2-3.6 0-2 
+                        2.3-3.6 5.2-3.6 2.9 0 5.2 
+                        1.6 5.2 3.6zm-31.1-6.7c-.7 
+                        2-3.1 2.9-5.2 2-2.2-.7-3.1-3.1-2.2-5.1.7-2 
+                        3.1-2.9 5.2-2 2.2.8 3.1 
+                        3.1 2.2 5.1zm44.2-1.7c-2.9.7-5.9-.7-6.7-3.1-.7-2.9 
+                        1.2-5.9 4.1-6.7 2.9-.7 
+                        5.9.7 6.7 3.1.7 2.9-1.2 
+                        5.9-4.1 6.7zm38.5-8.2c-2.2 
+                        2-5.9 1.2-7.8-1.6-2-2.9-1.6-6.7 
+                        1.2-8.6 2.9-2.2 6.7-1.2 
+                        7.8 1.6 2 3 1.6 6.8-1.2 
+                        8.6zm44.8-3.5c-.7 2.9-3.9 
+                        4.5-6.7 3.5-3.1-.7-4.8-3.9-3.9-6.7.7-2.9 
+                        3.9-4.5 6.7-3.5 3 .7 4.8 
+                        3.9 3.9 6.7zM248 8C111 8 0 
+                        119 0 256c0 110.3 71.5 203.9 
+                        170.7 237 12.8 2.3 17.5-5.6 
+                        17.5-12.3 0-6.1-.2-22.2-.3-43.6-69.5 
+                        15.1-84.2-33.6-84.2-33.6-11.7-29.8-28.6-37.7-28.6-37.7-23.4-16.2 
+                        1.8-15.8 1.8-15.8 25.9 1.8 39.5 
+                        26.7 39.5 26.7 22.9 39.3 60 
+                        28 74.7 21.5 2.3-16.6 9-28 
+                        16.4-34.4-55.5-6.1-113.9-27.8-113.9-123.9 
+                        0-27.4 9.8-49.8 26.1-67.3-2.6-6.4-11.4-32.3 
+                        2.5-67.4 0 0 21.5-6.9 
+                        70.4 26.1 20.3-5.6 42.1-8.4 
+                        63.7-8.5 21.6.1 43.5 2.9 
+                        63.7 8.5 48.9-33.1 70.4-26.1 
+                        70.4-26.1 13.9 35.1 5.1 
+                        61 2.5 67.4 16.2 17.5 26.1 
+                        39.9 26.1 67.3 0 96.3-58.5 
+                        117.8-114.2 123.8 9.2 7.9 
+                        17.4 23.5 17.4 47.5 0 34.3-.3 
+                        61.9-.3 70.3 0 6.8 4.6 
+                        14.7 17.5 12.2C424.5 459.9 
+                        496 366.3 496 256 496 119 
+                        385 8 248 8z"/>
+                    </svg>
+                    GitHub
+                </a>
+
+                <!-- Email -->
+                <a href="mailto:spcesar912@hotmail.com"
+                    class="flex items-center gap-2 px-5 py-2 border border-gray-400 rounded-full 
+                        text-gray-300 hover:bg-gray-100 hover:text-gray-900 transition">
+                    <!-- Icono Email -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" 
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" 
+                    class="w-4 h-4">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" />
+                        <path d="M3 7l9 6l9 -6" />
+                    </svg>
+                    Email
+                </a>
+                </div>
+            </div>
+
+            <!-- Imagen -->
+            <div class="flex-1 flex justify-center md:justify-end">
+                <div class="w-64 h-64 md:w-80 md:h-80 relative overflow-hidden">
+                <img src="./assets/img/fotoperfilBN.png" alt="Foto de perfil"
+                    class="w-full h-full object-cover [mask-image:linear-gradient(to_top,rgba(0,0,0,0)_0%,rgba(0,0,0,1)_40%)] [-webkit-mask-image:linear-gradient(to_top,rgba(0,0,0,0)_0%,rgba(0,0,0,1)_40%)]">
+                </div>
+            </div>
+        </section>
+        <!-- Sección Proyectos ------------------------------------------------------------------------->
+        <section id="projects" class="max-w-[1200px] mx-auto px-4 py-10 space-y-16">
+            <h2 class="text-3xl font-bold flex items-center gap-2">
+                <!-- Icono proyectos -->
+                <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-code"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 8l-4 4l4 4" /><path d="M17 8l4 4l-4 4" /><path d="M14 4l-4 16" /></svg>
+                Proyectos
+            </h2>
+
+            <!-- Proyecto 01 -->
+            <div class="flex flex-col md:flex-row items-start gap-8 group">
+                <!-- Imagen -->
+                <div class="flex-shrink-0 w-full md:w-5/12 max-h-80 overflow-hidden rounded-lg border border-white/10 shadow-md group">
+                    <img src="./assets/img/projectAuth.png" 
+                        alt="Proyecto 1" 
+                        class="w-full h-full object-cover transform scale-110 transition-transform duration-700 ease-in-out group-hover:scale-100">
+                </div>
+
+                    <!-- Descripción -->
+                <div class="flex-1 space-y-4">
+                    <h3 class="text-xl font-semibold">Node Auth - Sistema de autenticación con JWT y Cookies</h3>
+                    
+                    <!-- Etiquetas -->
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 text-sm bg-gray-800 rounded-full">Node.js</span>
+                        <span class="px-3 py-1 text-sm bg-gray-800 rounded-full">Express</span>
+                        <span class="px-3 py-1 text-sm bg-gray-800 rounded-full">Bootstrap</span>
+                    </div>
+
+                    <!-- Texto -->
+                    <p class="text-gray-400">
+                        Sistema de autenticación seguro desarrollado en Node.js. Implementa registro y login de usuarios, gestión de sesiones con JWT almacenados en cookies seguras, y cifrado de contraseñas con bcrypt. Incluye vistas dinámicas con EJS y estilos con Bootstrap.
+                    </p>
+
+                    <!-- Botones -->
+                    <div class="flex gap-4">
+                        <!-- GitHub -->
+                        <a href="https://github.com/Sp-Cesar/node-auth-jwt-cookies" target="_blank"
+                        class="flex items-center gap-2 px-4 py-2 border border-gray-400 rounded-full 
+                                text-gray-300 hover:bg-gray-100 hover:text-gray-900 transition">
+                        <!-- Icono GitHub -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" 
+                        viewBox="0 0 24 24" fill="currentColor" 
+                        class="w-4 h-4">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M5.315 2.1c.791 -.113 1.9 .145 3.333 .966l.272 .161l.16 .1l.397 -.083a13.3 13.3 0 0 1 4.59 -.08l.456 .08l.396 .083l.161 -.1c1.385 -.84 2.487 -1.17 3.322 -1.148l.164 .008l.147 .017l.076 .014l.05 .011l.144 .047a1 1 0 0 1 .53 .514a5.2 5.2 0 0 1 .397 2.91l-.047 .267l-.046 .196l.123 .163c.574 .795 .93 1.728 1.03 2.707l.023 .295l.007 .272c0 3.855 -1.659 5.883 -4.644 6.68l-.245 .061l-.132 .029l.014 .161l.008 .157l.004 .365l-.002 .213l-.003 3.834a1 1 0 0 1 -.883 .993l-.117 .007h-6a1 1 0 0 1 -.993 -.883l-.007 -.117v-.734c-1.818 .26 -3.03 -.424 -4.11 -1.878l-.535 -.766c-.28 -.396 -.455 -.579 -.589 -.644l-.048 -.019a1 1 0 0 1 .564 -1.918c.642 .188 1.074 .568 1.57 1.239l.538 .769c.76 1.079 1.36 1.459 2.609 1.191l.001 -.678l-.018 -.168a5.03 5.03 0 0 1 -.021 -.824l.017 -.185l.019 -.12l-.108 -.024c-2.976 -.71 -4.703 -2.573 -4.875 -6.139l-.01 -.31l-.004 -.292a5.6 5.6 0 0 1 .908 -3.051l.152 -.222l.122 -.163l-.045 -.196a5.2 5.2 0 0 1 .145 -2.642l.1 -.282l.106 -.253a1 1 0 0 1 .529 -.514l.144 -.047l.154 -.03z"/>
+                        </svg>
+                        Repository
+                        </a>
+                        
+                    </div>
+                </div>
+            </div>
+            <!-- Proyecto 02 -->
+            <div class="flex flex-col md:flex-row items-start gap-8 group">
+                <!-- Imagen -->
+                <div class="flex-shrink-0 w-full md:w-5/12 max-h-80 overflow-hidden rounded-lg border border-white/10 shadow-md group">
+                    <img src="./assets/img/projectportafolio.png" 
+                        alt="Proyecto 2" 
+                        class="w-full h-full object-cover transform scale-110 transition-transform duration-700 ease-in-out group-hover:scale-100">
+                </div>
+
+                    <!-- Descripción -->
+                <div class="flex-1 space-y-4">
+                    <h3 class="text-xl font-semibold">Portafolio Personal - Aaron Sachun</h3>
+                    
+                    <!-- Etiquetas -->
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 text-sm bg-gray-800 rounded-full">HTML</span>
+                        <span class="px-3 py-1 text-sm bg-gray-800 rounded-full">Tailwind CSS</span>
+                        <span class="px-3 py-1 text-sm bg-gray-800 rounded-full">JavaScript</span>
+                    </div>
+
+                    <!-- Texto -->
+                    <p class="text-gray-400">
+                        Portafolio personal diseñado y desarrollado desde cero para mostrar mis proyectos, experiencia y stack tecnológico. Construido con Tailwind CSS y buenas prácticas de diseño responsive, integrando efectos visuales modernos como glassmorphism, gradientes y animaciones.
+                    </p>
+
+                    <!-- Botones -->
+                    <div class="flex gap-4">
+                        <!-- GitHub -->
+                        <a href="https://github.com/tuusuario/proyecto1" target="_blank"
+                        class="flex items-center gap-2 px-4 py-2 border border-gray-400 rounded-full 
+                                text-gray-300 hover:bg-gray-100 hover:text-gray-900 transition">
+                        <!-- Icono GitHub -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" 
+                        viewBox="0 0 24 24" fill="currentColor" 
+                        class="w-4 h-4">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M5.315 2.1c.791 -.113 1.9 .145 3.333 .966l.272 .161l.16 .1l.397 -.083a13.3 13.3 0 0 1 4.59 -.08l.456 .08l.396 .083l.161 -.1c1.385 -.84 2.487 -1.17 3.322 -1.148l.164 .008l.147 .017l.076 .014l.05 .011l.144 .047a1 1 0 0 1 .53 .514a5.2 5.2 0 0 1 .397 2.91l-.047 .267l-.046 .196l.123 .163c.574 .795 .93 1.728 1.03 2.707l.023 .295l.007 .272c0 3.855 -1.659 5.883 -4.644 6.68l-.245 .061l-.132 .029l.014 .161l.008 .157l.004 .365l-.002 .213l-.003 3.834a1 1 0 0 1 -.883 .993l-.117 .007h-6a1 1 0 0 1 -.993 -.883l-.007 -.117v-.734c-1.818 .26 -3.03 -.424 -4.11 -1.878l-.535 -.766c-.28 -.396 -.455 -.579 -.589 -.644l-.048 -.019a1 1 0 0 1 .564 -1.918c.642 .188 1.074 .568 1.57 1.239l.538 .769c.76 1.079 1.36 1.459 2.609 1.191l.001 -.678l-.018 -.168a5.03 5.03 0 0 1 -.021 -.824l.017 -.185l.019 -.12l-.108 -.024c-2.976 -.71 -4.703 -2.573 -4.875 -6.139l-.01 -.31l-.004 -.292a5.6 5.6 0 0 1 .908 -3.051l.152 -.222l.122 -.163l-.045 -.196a5.2 5.2 0 0 1 .145 -2.642l.1 -.282l.106 -.253a1 1 0 0 1 .529 -.514l.144 -.047l.154 -.03z"/>
+                        </svg>
+
+                        Code
+                        </a>
+
+                        <!-- Preview -->
+                        <a href="https://preview-proyecto1.com" target="_blank"
+                        class="flex items-center gap-2 px-4 py-2 border border-gray-400 rounded-full 
+                                text-gray-300 hover:bg-gray-100 hover:text-gray-900 transition">
+                        <!-- Icono link externo -->
+                        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-external-link"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /><path d="M11 13l9 -9" /><path d="M15 4h5v5" /></svg>
+                        Preview
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="tech" class="max-w-[1200px] mx-auto px-4 py-20">
+            <!-- Título sección -->
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold">Tecnologías</h2>
+                <p class="mt-4 text-gray-400 max-w-2xl mx-auto">
+                En mi viaje como desarrollador he trabajado con un stack variado y diferentes herramientas que potencian mi flujo de trabajo.
+                </p>
+            </div>
+
+            <!-- Contenedor de tarjetas -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <!-- Stack -->
+                <div class="bg-white/5 backdrop-blur-md border border-white/10 shadow-lg rounded-xl p-8">
+                    <h3 class="text-xl font-semibold mb-6 js" >Stack</h3>
+                    <div class="grid grid-cols-3 gap-6 place-items-center">
+                        <div class="flex flex-col items-center">
+                            <img src="./assets/icons/html5.svg" alt="HTML" class="w-12 h-12">
+                            <span class="text-sm mt-2">HTML</span>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <img src="./assets/icons/css_old.svg" alt="CSS" class="w-12 h-12">
+                            <span class="text-sm mt-2">CSS</span>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <img src="./assets/icons/javascript.svg" alt="JavaScript" class="w-12 h-12">
+                            <span class="text-sm mt-2">JavaScript</span>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <img src="./assets/icons/bootstrap.svg" alt="Bootstrap" class="w-12 h-12">
+                            <span class="text-sm mt-2">Bootstrap</span>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <img src="./assets/icons/nodejs.svg" alt="NodeJS" class="w-12 h-12">
+                            <span class="text-sm mt-2">NodeJS</span>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <img src="./assets/icons/expressjs_dark.svg" alt="Express" class="w-12 h-12">
+                            <span class="text-sm mt-2">Express</span>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <img src="./assets/icons/mysql.svg" alt="MySQL" class="w-12 h-12">
+                            <span class="text-sm mt-2">MySQL</span>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <img src="./assets/icons/tailwindcss.svg" alt="TailwindCSS" class="w-12 h-12">
+                            <span class="text-sm mt-2">TailwindCSS</span>
+                        </div>
+                        
+
+                    </div>
+                </div>
+
+                <!-- Herramientas -->
+                <div class="bg-white/5 backdrop-blur-md border border-white/10 shadow-lg rounded-xl p-8">
+                    <h3 class="text-xl font-semibold mb-6">Herramientas</h3>
+                    <div class="grid grid-cols-3 gap-6 place-items-center">
+                        <div class="flex flex-col items-center">
+                            <img src="./assets/icons/git.svg" alt="Git" class="w-12 h-12">
+                            <span class="text-sm mt-2">Git</span>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <img src="./assets/icons/github.svg" alt="GitHub" class="w-12 h-12">
+                            <span class="text-sm mt-2">GitHub</span>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <img src="./assets/icons/vscode.svg" alt="VS Code" class="w-12 h-12">
+                            <span class="text-sm mt-2">VS Code</span>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <img src="./assets/icons/notion.svg" alt="Notion" class="w-12 h-12">
+                            <span class="text-sm mt-2">Notion</span>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <img src="./assets/icons/slack.svg" alt="Slack" class="w-12 h-12">
+                            <span class="text-sm mt-2">Slack</span>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <img src="./assets/icons/npm.svg" alt="NPM" class="w-12 h-12">
+                            <span class="text-sm mt-2">NPM</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="about" class="max-w-[900px] mx-auto px-4 py-8 flex flex-col md:flex-row items-center justify-center gap-12 text-center md:text-left">
+            
+            <!-- Imagen izquierda centrada -->
+             
+            <div class="relative flex-shrink-0 h-[450px] rounded-xl">
+                <!-- Fondo decorativo expandido -->
+                <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.15),transparent)] blur-3xl"></div>
+
+                <!-- Imagen con overflow-hidden independiente -->
+                <div class="relative h-full overflow-hidden rounded-xl shadow-lg">
+                    <img src="./assets/img/yocartoon.png" 
+                        alt="Mi Foto" 
+                        class="w-full h-full object-cover">
+                </div>
+            </div>
+
+
+            <!-- Contenido derecha centrado -->
+            <div class="flex-1 flex flex-col items-center justify-center space-y-6 text-center md:text-left">
+                <!-- Subtítulo -->
+                <div class="flex items-center justify-center md:justify-start">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-user"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" /><path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" /></svg>
+                    <h2 class="text-3xl font-bold">Sobre mí</h2>
+                </div>
+
+                <!-- Íconos de contacto -->
+                <div class="flex space-x-6 justify-center md:justify-start">
+                    <!-- LinkedIn -->
+                    <a href="https://www.linkedin.com/in/c%C3%A9sar-aaron-sachun-pozo-04415a1b5/" target="_blank" 
+                        class="text-gray-300 hover:text-white hover:drop-shadow-[0_0_8px_rgba(99,102,241,0.9)] hover:scale-110 transition transform">
+                        <!-- SVG LinkedIn -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.22 8.91h4.55V24H.22V8.91zM8.7 8.91h4.36v2.05h.06c.61-1.16 2.1-2.39 4.33-2.39 4.63 0 5.48 3.05 5.48 7.01V24h-4.55v-6.87c0-1.64-.03-3.74-2.28-3.74-2.28 0-2.63 1.78-2.63 3.62V24H8.7V8.91z"/>
+                        </svg>
+                    </a>
+
+                    <!-- GitHub -->
+                    <a href="https://github.com/Sp-Cesar" target="_blank" 
+                        class="text-gray-300 hover:text-white hover:drop-shadow-[0_0_8px_rgba(99,102,241,0.9)] hover:scale-110 transition transform">
+                        <!-- SVG GitHub -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 
+                                3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 
+                                0-.285-.01-1.04-.015-2.04-3.338.726-4.042-1.61-4.042-1.61 
+                                -.546-1.387-1.333-1.757-1.333-1.757 
+                                -1.089-.744.084-.729.084-.729 1.205.084 1.84 1.236 1.84 1.236 
+                                1.07 1.835 2.809 1.305 3.495.998.108-.775.417-1.305.76-1.605 
+                                -2.665-.3-5.466-1.334-5.466-5.93 
+                                0-1.31.465-2.381 1.235-3.221-.135-.303-.54-1.523.105-3.176 
+                                0 0 1.005-.322 3.3 1.23a11.48 11.48 0 0 1 3-.405 
+                                c1.02.005 2.045.138 3 .405 2.28-1.552 3.285-1.23 
+                                3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 
+                                1.23 1.911 1.23 3.221 0 4.61-2.805 5.625-5.475 
+                                5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 
+                                3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 
+                                24 12.297c0-6.627-5.373-12-12-12"/>
+                        </svg>
+                    </a>
+
+                    <!-- Correo -->
+                    <a href="mailto:spcesar912@hotmail.com" 
+                        class="text-gray-300 hover:text-white hover:drop-shadow-[0_0_8px_rgba(99,102,241,0.9)] hover:scale-110 transition transform">
+                        <!-- SVG Mail -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="5" width="18" height="14" rx="2" ry="2"/>
+                        <polyline points="3,6 12,13 21,6"/>
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Descripción -->
+                <div class="bg-white/5 backdrop-blur-md border border-white/10 rounded-xl p-6 shadow-lg max-w-lg">
+                    <p class="text-gray-300 leading-relaxed">
+                        Soy estudiante universitario de Ingeniería de Software enfocado en el desarrollo backend.  
+                        Aunque aún no tengo experiencia profesional, me estoy formando en tecnologías como 
+                        <span class="text-indigo-400 font-semibold">Node.js, Express y MySQL</span>, construyendo proyectos personales que refuerzan mis conocimientos.  
+                        Mi objetivo es integrarme en un equipo donde pueda aprender, aportar y crecer como desarrollador backend.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="w-full border-t border-white/10 bg-white/5 backdrop-blur-md">
+        <div class="max-w-[1200px] mx-auto px-4 py-6 flex flex-col md:flex-row items-center justify-between">
+            
+            <!-- Texto izquierda -->
+            <p class="text-gray-400 text-sm">
+            © 2025 <span class="font-semibold text-white">Aaron Sachun</span> | Sourcepath
+            </p>
+
+            <!-- Redes sociales derecha -->
+            <div class="flex space-x-6 mt-4 md:mt-0">
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/in/c%C3%A9sar-aaron-sachun-pozo-04415a1b5/" target="_blank" class="text-gray-400 hover:text-white hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.9)] transition">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.22 8.91h4.55V24H.22V8.91zM8.7 8.91h4.36v2.05h.06c.61-1.16 2.1-2.39 4.33-2.39 4.63 0 5.48 3.05 5.48 7.01V24h-4.55v-6.87c0-1.64-.03-3.74-2.28-3.74-2.28 0-2.63 1.78-2.63 3.62V24H8.7V8.91z"/>
+                </svg>
+            </a>
+
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/aaron_rsp/" target="_blank" class="text-gray-400 hover:text-white hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.9)] transition">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M7 2C4.243 2 2 4.243 2 7v10c0 2.757 2.243 5 5 5h10c2.757 0 5-2.243 5-5V7c0-2.757-2.243-5-5-5H7zm0-2h10c3.866 0 7 3.134 7 7v10c0 3.866-3.134 7-7 7H7c-3.866 0-7-3.134-7-7V7c0-3.866 3.134-7 7-7zm5 6a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6zm6.5-3a1.5 1.5 0 110 3 1.5 1.5 0 010-3z"/>
+                </svg>
+            </a>
+
+            <!-- X / Twitter -->
+            <a href="https://x.com/SP_CesarAaron" target="_blank" class="text-gray-400 hover:text-white hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.9)] transition">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M18.244 2h3.308l-7.227 8.26L24 22h-7.373l-5.729-7.477L4.77 22H1.462l7.73-8.836L0 2h7.613l5.186 6.864L18.244 2zM16.91 20h1.833L7.17 4H5.216l11.694 16z"/>
+                </svg>
+            </a>
+
+            <!-- WhatsApp -->
+            <a href="https://wa.me/+51968256869" target="_blank" class="text-gray-400 hover:text-white hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.9)] transition">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 .5C5.648.5.5 5.648.5 12c0 2.119.555 4.174 1.606 5.985L.5 23.5l5.69-1.566C8.104 22.444 10.027 23 12 23c6.352 0 11.5-5.148 11.5-11.5S18.352.5 12 .5zm0 20c-1.82 0-3.576-.5-5.1-1.446l-.365-.217-3.375.929.902-3.492-.238-.366A9.477 9.477 0 012.5 12c0-5.238 4.262-9.5 9.5-9.5s9.5 4.262 9.5 9.5-4.262 9.5-9.5 9.5zm5.309-7.02c-.293-.147-1.734-.855-2.004-.95-.27-.098-.465-.147-.66.146-.195.293-.756.95-.927 1.145-.171.195-.342.22-.635.073-.293-.146-1.236-.456-2.353-1.456-.87-.774-1.456-1.729-1.627-2.022-.171-.293-.018-.451.128-.598.132-.132.293-.342.439-.513.146-.171.195-.293.293-.488.098-.195.049-.366-.024-.513-.073-.146-.659-1.61-.902-2.208-.237-.57-.479-.493-.66-.503-.171-.01-.366-.012-.561-.012-.195 0-.512.073-.78.366-.268.293-1.025 1.001-1.025 2.44s1.05 2.832 1.195 3.027c.146.195 2.07 3.158 5.022 4.426.703.303 1.25.484 1.678.62.705.224 1.35.192 1.857.117.567-.085 1.734-.708 1.98-1.393.244-.684.244-1.27.171-1.393-.073-.122-.268-.195-.561-.342z"/>
+                </svg>
+            </a>
+            </div>
+        </div>
+    </footer>
+  </body>
+</html>
