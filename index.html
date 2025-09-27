@@ -27,10 +27,10 @@
             <div class="flex space-x-6 px-6 py-2 
                         bg-white/10 backdrop-blur-md border border-white/10 shadow-lg 
                         rounded-full text-sm font-medium">
-            <a href="#projects" class="hover:text-slate-300 transition">Proyectos</a>
-            <a href="#tech" class="hover:text-slate-300 transition">Tecnologías</a>
-            <a href="#about" class="hover:text-slate-300 transition">Sobre mí</a>
-            <a href="mailto:spcesar912@hotmail.com" class="hover:text-slate-300 transition">Contacto</a>
+            <a href="#projects" class="hover:text-slate-300 transition" data-key="header.projects"></a>
+            <a href="#tech" class="hover:text-slate-300 transition" data-key="header.tech"></a>
+            <a href="#about" class="hover:text-slate-300 transition" data-key="header.about"></a>
+            <a href="mailto:spcesar912@hotmail.com" class="hover:text-slate-300 transition" data-key="header.contact"></a>
             </div>
         </div>
 
@@ -46,10 +46,10 @@
 
             <!-- Navegación -->
             <nav class="flex space-x-8 text-sm font-medium">
-                <a href="#projects" class="hover:text-slate-300 transition">Proyectos</a>
-                <a href="#tech" class="hover:text-slate-300 transition">Tecnologías</a>
-                <a href="#about" class="hover:text-slate-300 transition">Sobre mí</a>
-                <a href="mailto:spcesar912@hotmail.com" class="hover:text-slate-300 transition">Contacto</a>
+                <a href="#projects" class="hover:text-slate-300 transition" data-key="header.projects"></a>
+                <a href="#tech" class="hover:text-slate-300 transition" data-key="header.tech"></a>
+                <a href="#about" class="hover:text-slate-300 transition" data-key="header.about"></a>
+                <a href="mailto:spcesar912@hotmail.com" class="hover:text-slate-300 transition" data-key="header.contact"></a>
             </nav>
 
             <!-- Iconos -->
@@ -60,10 +60,52 @@
                 <a href="https://github.com/Sp-Cesar" target="_blank" class="hover:text-indigo-300 transition">
                 <img src="./assets/icons/github.svg" alt="GitHub" class="w-5 h-5">
                 </a>
-            </div>
 
+            <!-- Dropdown idiomas -->
+            <div class="relative inline-block text-left">
+                <!-- Botón actual -->
+                <button id="langBtn" 
+                        class="flex items-center space-x-2 px-3 py-2 rounded-md hover:bg-white/20 transition">
+                    <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-world"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" /><path d="M3.6 9h16.8" /><path d="M3.6 15h16.8" /><path d="M11.5 3a17 17 0 0 0 0 18" /><path d="M12.5 3a17 17 0 0 1 0 18" /></svg>
+                </button>
+
+                <!-- Lista desplegable -->
+                <div id="langMenu" 
+                    class="hidden absolute right-0 mt-2 bg-white/10 backdrop-blur-md rounded-md shadow-lg border border-white/20 z-50">
+                    <button onclick="setLanguage('es')" class="flex items-center w-full px-3 py-2 hover:bg-white/20">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 640 480">
+                    <g fill-rule="evenodd">
+                    <path fill="#aa151b" d="M0 0h640v480H0z"/>
+                    <path fill="#f1bf00" d="M0 120h640v240H0z"/>
+                    </g>
+                    </svg>
+                    </button>
+                    <button onclick="setLanguage('en')" class="flex items-center w-full px-3 py-2 hover:bg-white/20">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 60 30">
+                    <clipPath id="a">
+                        <path d="M0 0v30h60V0z"/>
+                    </clipPath>
+                    <clipPath id="b">
+                        <path d="M30 15h30v15zv15H0z"/>
+                    </clipPath>
+                    <g clip-path="url(#a)">
+                        <path d="M0 0v30h60V0z" fill="#012169"/>
+                        <path d="M0 0l60 30m0-30L0 30" stroke="#fff" stroke-width="6"/>
+                        <path d="M0 0l60 30m0-30L0 30" stroke="#C8102E" stroke-width="4" clip-path="url(#b)"/>
+                        <path d="M30 0v30M0 15h60" stroke="#fff" stroke-width="10"/>
+                        <path d="M30 0v30M0 15h60" stroke="#C8102E" stroke-width="6"/>
+                    </g>
+                    </svg>
+                    </button>
+                    <button onclick="setLanguage('it')" class="flex items-center w-full px-3 py-2 hover:bg-white/20">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 3 2">
+                    <path fill="#009246" d="M0 0h1v2H0z"/>
+                    <path fill="#fff" d="M1 0h1v2H1z"/>
+                    <path fill="#ce2b37" d="M2 0h1v2H2z"/>
+                    </svg>
+                    </button>
+                </div>
             </div>
-        </div>
     </header>
     <!-- Main content -->
     <main class="max-w-[1200px] mx-auto px-4 py-20">
@@ -71,11 +113,9 @@
   
             <!-- Texto -->
             <div class="flex-1 text-center md:text-left space-y-6">
-                <h1 class="text-4xl md:text-5xl font-bold">Hola, soy <span class="text-indigo-300">Aaron</span></h1>
-                <p class="text-gray-300 leading-relaxed max-w-xl">
-                Estudiante de Ingeniería de Software apasionado por el desarrollo backend. 
-                Me estoy formando en tecnologías modernas para construir sistemas robustos, 
-                escalables y de alto impacto.
+                <h1 class="text-4xl md:text-5xl font-bold" data-key="hero.title"></h1>
+                <p class="text-gray-300 leading-relaxed max-w-xl" data-key="hero.subtitle">
+                
                 </p>
 
                 <!-- Enlaces -->
@@ -177,7 +217,7 @@
             <h2 class="text-3xl font-bold flex items-center gap-2">
                 <!-- Icono proyectos -->
                 <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-code"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 8l-4 4l4 4" /><path d="M17 8l4 4l-4 4" /><path d="M14 4l-4 16" /></svg>
-                Proyectos
+                <span data-key="projects.title"></span>
             </h2>
 
             <!-- Proyecto 01 -->
@@ -191,7 +231,7 @@
 
                     <!-- Descripción -->
                 <div class="flex-1 space-y-4">
-                    <h3 class="text-xl font-semibold">Node Auth - Sistema de autenticación con JWT y Cookies</h3>
+                    <h3 class="text-xl font-semibold" data-key="projects.nodeauth.title"></h3>
                     
                     <!-- Etiquetas -->
                     <div class="flex flex-wrap gap-2">
@@ -202,9 +242,7 @@
                     </div>
 
                     <!-- Texto -->
-                    <p class="text-gray-400">
-                        Sistema de autenticación seguro desarrollado en Node.js. Implementa registro y login de usuarios, gestión de sesiones con JWT almacenados en cookies seguras, y cifrado de contraseñas con bcrypt. Incluye vistas dinámicas con EJS y estilos con Bootstrap.
-                    </p>
+                    <p class="text-gray-400" data-key="projects.nodeauth.desc"></p>
 
                     <!-- Botones -->
                     <div class="flex gap-4">
@@ -236,7 +274,7 @@
 
                     <!-- Descripción -->
                 <div class="flex-1 space-y-4">
-                    <h3 class="text-xl font-semibold">PixelDrop - UploadImages</h3>
+                    <h3 class="text-xl font-semibold" data-key="projects.uploadimages.title"></h3>
                     
                     <!-- Etiquetas -->
                     <div class="flex flex-wrap gap-2">
@@ -248,9 +286,7 @@
                     </div>
 
                     <!-- Texto -->
-                    <p class="text-gray-400">
-                        Aplicación web full-stack para subir, almacenar y visualizar imágenes. Construida con Node.js, Express, EJS, TailwindCSS y MySQL. Permite arrastrar y soltar archivos, previsualizar antes de subirlos, almacenarlos en base de datos y mostrarlos en una galería con opciones para copiar el enlace o descargar la imagen.
-                    </p>
+                    <p class="text-gray-400" data-key="projects.uploadimages.desc"></p>
 
                     <!-- Botones -->
                     <div class="flex gap-4">
@@ -284,7 +320,7 @@
 
                     <!-- Descripción -->
                 <div class="flex-1 space-y-4">
-                    <h3 class="text-xl font-semibold">Portafolio Personal - Aaron Sachun</h3>
+                    <h3 class="text-xl font-semibold" data-key="projects.portfolio.title"></h3>
                     
                     <!-- Etiquetas -->
                     <div class="flex flex-wrap gap-2">
@@ -294,9 +330,7 @@
                     </div>
 
                     <!-- Texto -->
-                    <p class="text-gray-400">
-                        Portafolio personal diseñado y desarrollado desde cero para mostrar mis proyectos, experiencia y stack tecnológico. Construido con Tailwind CSS y buenas prácticas de diseño responsive, integrando efectos visuales modernos como glassmorphism, gradientes y animaciones.
-                    </p>
+                    <p class="text-gray-400" data-key="projects.portfolio.desc"></p>
 
                     <!-- Botones -->
                     <div class="flex gap-4">
@@ -330,9 +364,9 @@
         <section id="tech" class="max-w-[1200px] mx-auto px-4 py-20">
             <!-- Título sección -->
             <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold">Tecnologías</h2>
+                <h2 class="text-3xl font-bold" data-key="tech.title"></h2>
                 <p class="mt-4 text-gray-400 max-w-2xl mx-auto">
-                En mi viaje como desarrollador he trabajado con un stack variado y diferentes herramientas que potencian mi flujo de trabajo.
+                    <span data-key="tech.subtitle"></span>
                 </p>
             </div>
 
@@ -341,7 +375,7 @@
                 
                 <!-- Stack -->
                 <div class="bg-white/5 backdrop-blur-md border border-white/10 shadow-lg rounded-xl p-8">
-                    <h3 class="text-xl font-semibold mb-6 js" >Stack</h3>
+                    <h3 class="text-xl font-semibold mb-6 js" data-key="tech.stack"></h3>
                     <div class="grid grid-cols-3 gap-6 place-items-center">
                         <div class="flex flex-col items-center">
                             <img src="./assets/icons/html5.svg" alt="HTML" class="w-12 h-12">
@@ -382,7 +416,7 @@
 
                 <!-- Herramientas -->
                 <div class="bg-white/5 backdrop-blur-md border border-white/10 shadow-lg rounded-xl p-8">
-                    <h3 class="text-xl font-semibold mb-6">Herramientas</h3>
+                    <h3 class="text-xl font-semibold mb-6" data-key="tech.tools"></h3>
                     <div class="grid grid-cols-3 gap-6 place-items-center">
                         <div class="flex flex-col items-center">
                             <img src="./assets/icons/git.svg" alt="Git" class="w-12 h-12">
@@ -434,7 +468,7 @@
                 <!-- Subtítulo -->
                 <div class="flex items-center justify-center md:justify-start">
                     <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-user"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" /><path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" /></svg>
-                    <h2 class="text-3xl font-bold">Sobre mí</h2>
+                    <h2 class="text-3xl font-bold" data-key="about.title"></h2>
                 </div>
 
                 <!-- Íconos de contacto -->
@@ -485,10 +519,9 @@
                 <!-- Descripción -->
                 <div class="bg-white/5 backdrop-blur-md border border-white/10 rounded-xl p-6 shadow-lg max-w-lg">
                     <p class="text-gray-300 leading-relaxed">
-                        Soy estudiante universitario de Ingeniería de Software enfocado en el desarrollo backend, me estoy formando en tecnologías como 
-                        <span class="text-indigo-400 font-semibold">Node.js, Express y MySQL</span>, complementado con conocimientos en frontend para construir aplicaciones completas y funcionales. 
+                        <span data-key="about.text01"></span>
                         <br>
-                        Me destaco por mi comunicación efectiva y capacidad de trabajo en equipo, habilidades que he reforzado al colaborar en proyectos universitarios utilizando herramientas de gestión ágil. Me apasiona crear soluciones tecnológicas que sean escalables, eficientes y de alto impacto, mientras continúo perfeccionando mis habilidades técnicas y profesionales.
+                        <span data-key="about.text02"></span>
                     </p>
                 </div>
             </div>
@@ -503,7 +536,7 @@
             </p>
 
             <!-- Redes sociales derecha -->
-            <div class="flex space-x-6 mt-4 md:mt-0">
+            <div class="flex items-center space-x-6 mt-4 md:mt-0">
             <!-- LinkedIn -->
             <a href="https://www.linkedin.com/in/c%C3%A9sar-aaron-sachun-pozo-04415a1b5/" target="_blank" class="text-gray-400 hover:text-white hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.9)] transition">
                 <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 24 24">
@@ -531,8 +564,66 @@
                 <path d="M12 .5C5.648.5.5 5.648.5 12c0 2.119.555 4.174 1.606 5.985L.5 23.5l5.69-1.566C8.104 22.444 10.027 23 12 23c6.352 0 11.5-5.148 11.5-11.5S18.352.5 12 .5zm0 20c-1.82 0-3.576-.5-5.1-1.446l-.365-.217-3.375.929.902-3.492-.238-.366A9.477 9.477 0 012.5 12c0-5.238 4.262-9.5 9.5-9.5s9.5 4.262 9.5 9.5-4.262 9.5-9.5 9.5zm5.309-7.02c-.293-.147-1.734-.855-2.004-.95-.27-.098-.465-.147-.66.146-.195.293-.756.95-.927 1.145-.171.195-.342.22-.635.073-.293-.146-1.236-.456-2.353-1.456-.87-.774-1.456-1.729-1.627-2.022-.171-.293-.018-.451.128-.598.132-.132.293-.342.439-.513.146-.171.195-.293.293-.488.098-.195.049-.366-.024-.513-.073-.146-.659-1.61-.902-2.208-.237-.57-.479-.493-.66-.503-.171-.01-.366-.012-.561-.012-.195 0-.512.073-.78.366-.268.293-1.025 1.001-1.025 2.44s1.05 2.832 1.195 3.027c.146.195 2.07 3.158 5.022 4.426.703.303 1.25.484 1.678.62.705.224 1.35.192 1.857.117.567-.085 1.734-.708 1.98-1.393.244-.684.244-1.27.171-1.393-.073-.122-.268-.195-.561-.342z"/>
                 </svg>
             </a>
+            <!-- Dropdown idiomas en footer -->
+            <div class="relative inline-block text-left ml-6">
+                <!-- Botón -->
+                <button id="langBtnFooter" 
+                        class="flex items-center space-x-2 px-3 py-2 rounded-md hover:bg-white/20 transition">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-world">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" />
+                        <path d="M3.6 9h16.8" />
+                        <path d="M3.6 15h16.8" />
+                        <path d="M11.5 3a17 17 0 0 0 0 18" />
+                        <path d="M12.5 3a17 17 0 0 1 0 18" />
+                    </svg>
+                </button>
+
+                <!-- Lista -->
+                <div id="langMenuFooter" 
+                class="hidden absolute right-0 bottom-full mb-2 bg-white/10 backdrop-blur-md rounded-md shadow-lg border border-white/20 z-50">
+
+                    <button onclick="setLanguage('es')" class="flex items-center w-full px-3 py-2 hover:bg-white/20">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 640 480">
+                    <g fill-rule="evenodd">
+                    <path fill="#aa151b" d="M0 0h640v480H0z"/>
+                    <path fill="#f1bf00" d="M0 120h640v240H0z"/>
+                    </g>
+                    </svg>
+                    </button>
+                    <button onclick="setLanguage('en')" class="flex items-center w-full px-3 py-2 hover:bg-white/20">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 60 30">
+                    <clipPath id="a">
+                        <path d="M0 0v30h60V0z"/>
+                    </clipPath>
+                    <clipPath id="b">
+                        <path d="M30 15h30v15zv15H0z"/>
+                    </clipPath>
+                    <g clip-path="url(#a)">
+                        <path d="M0 0v30h60V0z" fill="#012169"/>
+                        <path d="M0 0l60 30m0-30L0 30" stroke="#fff" stroke-width="6"/>
+                        <path d="M0 0l60 30m0-30L0 30" stroke="#C8102E" stroke-width="4" clip-path="url(#b)"/>
+                        <path d="M30 0v30M0 15h60" stroke="#fff" stroke-width="10"/>
+                        <path d="M30 0v30M0 15h60" stroke="#C8102E" stroke-width="6"/>
+                    </g>
+                    </svg>
+                    </button>
+                    <button onclick="setLanguage('it')" class="flex items-center w-full px-3 py-2 hover:bg-white/20">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 3 2">
+                    <path fill="#009246" d="M0 0h1v2H0z"/>
+                    <path fill="#fff" d="M1 0h1v2H1z"/>
+                    <path fill="#ce2b37" d="M2 0h1v2H2z"/>
+                    </svg>
+                    </button>
+                </div>
             </div>
+
+            </div>
+            
         </div>
+        
     </footer>
+    <script src="./js/lang.js"></script>
+
   </body>
 </html>

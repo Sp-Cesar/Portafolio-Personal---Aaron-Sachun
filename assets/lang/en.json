@@ -1,0 +1,29 @@
+{
+  "header.projects": "Projects",
+  "header.tech": "Technologies",
+  "header.about": "About Me",
+  "header.contact": "Contact",
+
+  "hero.title": "Hi, I'm Aaron",
+  "hero.subtitle": "Software Engineering student passionate about backend development. I am training in modern technologies to build robust, scalable, and high-impact systems.",
+
+  "projects.title": "Projects",
+
+  "projects.nodeauth.title": "Node Auth - Authentication System with JWT and Cookies",
+  "projects.nodeauth.desc": "Secure authentication system developed in Node.js. Implements user registration and login, session management with JWT stored in secure cookies, and password encryption with bcrypt. Includes dynamic views with EJS and styles with Bootstrap.",
+
+  "projects.uploadimages.title": "PixelDrop - UploadImages",
+  "projects.uploadimages.desc": "Full-stack web application for uploading, storing, and viewing images. Built with Node.js, Express, EJS, TailwindCSS, and MySQL. Allows drag-and-drop file upload, preview before uploading, storing in a database, and displaying them in a gallery with options to copy the link or download the image.",
+
+  "projects.portfolio.title": "Personal Portfolio - Aaron Sachun",
+  "projects.portfolio.desc": "Personal portfolio designed and developed from scratch to showcase my projects, experience, and tech stack. Built with Tailwind CSS and responsive design best practices, integrating modern visual effects like glassmorphism, gradients, and animations.",
+
+  "tech.title": "Technologies",
+  "tech.subtitle": "On my journey as a developer, I have worked with a varied stack and different tools that enhance my workflow.",
+  "tech.stack": "Stack",
+  "tech.tools": "Tools",
+
+  "about.title": "About Me",
+  "about.text01": "I am a Software Engineering student focused on backend development, training in technologies such as Node.js, Express, and MySQL, complemented with frontend knowledge to build complete and functional applications.",
+  "about.text02": "I stand out for effective communication and teamwork, skills I have strengthened by collaborating on university projects using agile management tools. I am passionate about creating technological solutions that are scalable, efficient, and high-impact, while continuously improving my technical and professional skills."
+}

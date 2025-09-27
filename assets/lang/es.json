@@ -1,0 +1,32 @@
+{
+  "header.projects": "Proyectos",
+  "header.tech": "Tecnologías",
+  "header.about": "Sobre mí",
+  "header.contact": "Contacto",
+
+  "hero.title": "Hola, soy Aaron",
+  "hero.subtitle": "Estudiante de Ingeniería de Software apasionado por el desarrollo backend. Me estoy formando en tecnologías modernas para construir sistemas robustos, escalables y de alto impacto.",
+
+
+  "projects.title": "Proyectos",
+
+  "projects.nodeauth.title": "Node Auth - Sistema de autenticación con JWT y Cookies",
+  "projects.nodeauth.desc": "Sistema de autenticación seguro desarrollado en Node.js. Implementa registro y login de usuarios, gestión de sesiones con JWT almacenados en cookies seguras, y cifrado de contraseñas con bcrypt. Incluye vistas dinámicas con EJS y estilos con Bootstrap.",
+
+  "projects.uploadimages.title": "PixelDrop - UploadImages",
+  "projects.uploadimages.desc": "Aplicación web full-stack para subir, almacenar y visualizar imágenes. Construida con Node.js, Express, EJS, TailwindCSS y MySQL. Permite arrastrar y soltar archivos, previsualizar antes de subirlos, almacenarlos en base de datos y mostrarlos en una galería con opciones para copiar el enlace o descargar la imagen.",
+
+  "projects.portfolio.title": "Portafolio Personal - Aaron Sachun",
+  "projects.portfolio.desc": "Portafolio personal diseñado y desarrollado desde cero para mostrar mis proyectos, experiencia y stack tecnológico. Construido con Tailwind CSS y buenas prácticas de diseño responsive, integrando efectos visuales modernos como glassmorphism, gradientes y animaciones.",
+  
+
+
+  "tech.title": "Tecnologías",
+  "tech.subtitle": "En mi viaje como desarrollador he trabajado con un stack variado y diferentes herramientas que potencian mi flujo de trabajo.",
+  "tech.stack": "Stack",
+  "tech.tools": "Herramientas",
+
+  "about.title": "Sobre mí",
+  "about.text01": "Soy estudiante universitario de Ingeniería de Software enfocado en el desarrollo backend, me estoy formando en tecnologías como Node.js, Express y MySQL, complementado con conocimientos en frontend para construir aplicaciones completas y funcionales. ",
+  "about.text02": "Me destaco por mi comunicación efectiva y capacidad de trabajo en equipo, habilidades que he reforzado al colaborar en proyectos universitarios utilizando herramientas de gestión ágil. Me apasiona crear soluciones tecnológicas que sean escalables, eficientes y de alto impacto, mientras continúo perfeccionando mis habilidades técnicas y profesionales."
+}
