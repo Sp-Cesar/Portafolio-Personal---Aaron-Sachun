@@ -15,6 +15,9 @@
   "projects.uploadimages.title": "PixelDrop - UploadImages",
   "projects.uploadimages.desc": "Applicazione web full-stack per caricare, archiviare e visualizzare immagini. Costruita con Node.js, Express, EJS, TailwindCSS e MySQL. Permette il caricamento tramite drag-and-drop, l’anteprima prima del caricamento, la memorizzazione nel database e la visualizzazione in una galleria con opzioni per copiare il link o scaricare l’immagine.",
 
+  "projects.taskboard.title": "TaskBoard - Gestione di Progetti",
+  "projects.taskboard.desc": "Applicazione full-stack di gestione di progetti sviluppata con Node.js, Express, MySQL, EJS e TailwindCSS sotto il pattern MVC. Permette di creare, modificare ed eliminare progetti, con un'interfaccia minimalista.",
+
   "projects.portfolio.title": "Portfolio Personale - Aaron Sachun",
   "projects.portfolio.desc": "Portfolio personale progettato e sviluppato da zero per mostrare i miei progetti, la mia esperienza e il mio stack tecnologico. Realizzato con Tailwind CSS e buone pratiche di design responsive, integrando effetti visivi moderni come glassmorphism, gradienti e animazioni.",
 
