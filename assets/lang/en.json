@@ -9,6 +9,9 @@
 
   "projects.title": "Projects",
 
+  "projects.ezykey.title": "EzyKey Racoon - Fullstack",
+  "projects.ezykey.desc": "I developed EzyKey, a complete e-commerce platform for selling software licenses, using a backend stack based on Node.js and Express.js to manage business logic, routing (including category pages, product details, and search), and interaction with a MySQL database. For the frontend, I implemented server-side rendering with EJS, creating dynamic views for the product catalog. The modern and fully responsive user interface was efficiently built with Tailwind CSS, incorporating elements like Glassmorphism.",
+
   "projects.nodeauth.title": "Node Auth - Authentication System with JWT and Cookies",
   "projects.nodeauth.desc": "Secure authentication system developed in Node.js. Implements user registration and login, session management with JWT stored in secure cookies, and password encryption with bcrypt. Includes dynamic views with EJS and styles with Bootstrap.",
 
